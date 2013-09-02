@@ -12,7 +12,7 @@ Then the page url should contain 'activities'
 Scenario: Test if Activities is displaying on the home page
 Given the visitor is on the home page
 When he clicks on Activities
-Then the page should contain 'Conheça nossas atividades'
+Then the page should contain "Conheça nossas atividades"
 
 Scenario: Test if Facebook link open the facebook page
 Given the visitor is on the home page 
