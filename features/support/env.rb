@@ -1,10 +1,16 @@
+$LOAD_PATH << File.expand_path('../../lib/sites', __FILE__)
+require 'taza'
+require 'espacoDaCrianca'
 require 'watir-webdriver'
-browser = Watir::Browser.new :firefox
 
-Before do
-  @browser = browser
-end
 
-at_exit do
-  browser.close
+module Taza
+  class Browser
+    def self.create_watir_webdriver(params)
+      driver = Selenium::WebDriver.for params[:browser].to_sym, :profile => params[:profile]
+      Watir::Browser.new(driver)
+    end
+  end
+
+
 end
