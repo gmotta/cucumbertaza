@@ -8,7 +8,7 @@ module Espaco
   	#	@site.browser.goto "http://espaco-da-crianca.herokuapp.com/"
   	#end
 
-    element(:sub_heading) { |name| browser.h1(:text => name }
+    element(:sub_heading) { |name| browser.h1(:text => name) }
 
 
 
