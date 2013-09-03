@@ -24,7 +24,7 @@ Given the visitor is on the home page
 #When he clicks on the 'Patrocínio' link
 #Then all logos of the sponsors must be displayed
 
-#Scenario: Test if contact information is being displayed on the footer
+Scenario: Test if contact information is being displayed on the footer
 Given the visitor is on the home page
-#Then contact information is displayed on the footer (Blog, Facebook, YouTube, e-Mail, Phone)
+Then contact information is displayed on the footer (Blog, Facebook, YouTube, e-Mail, Phone)
 

@@ -28,7 +28,7 @@ end
 
 Then /^the page should contain "([^"]*)"$/ do |name|
      @site.home_page.sub_heading_exists?(name).should be_true
- end
+end
 
 # When(/^he click on facebook link$/) do
 #     pending # express the regexp above with the code you wish you had
@@ -46,6 +46,6 @@ Then /^the page should contain "([^"]*)"$/ do |name|
 #     pending # express the regexp above with the code you wish you had
 # end
 
-# Then(/^contact information is displayed on the footer \(Blog, Facebook, YouTube, e\-Mail, Phone\)$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+Then(/^contact information is displayed on the footer \(Blog, Facebook, YouTube, e\-Mail, Phone\)$/) do
+     @site.home_page.footer_elements_shown?.should be_true
+end
