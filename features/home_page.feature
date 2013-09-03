@@ -26,8 +26,8 @@ Given the visitor is on the home page
 
 #Scenario: Test if sponsors logos are being displayed
 Given the visitor is on the home page
-#When he clicks on the 'Patrocínio' link
-#Then all logos of the sponsors must be displayed
+When he clicks on the 'Patrocínio' link
+Then the page should contain "Quem nos ajuda bastante!"
 
 #Scenario: Test if contact information is being displayed on the footer
 Given the visitor is on the home page

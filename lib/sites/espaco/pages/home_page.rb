@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'rubygems'
 require 'taza/page'
 
@@ -10,12 +12,11 @@ module Espaco
 
     element(:sub_heading) { |name| browser.h1(:text => name) }
     element(:activities_link) { browser.link(:text => 'Atividades') }
+    element(:patrocinio_link) {browser.link(:text => "Patrocínio")}
 
     def sub_heading_exists?(name)
       sub_heading(name).text.include? name
     end
-
-
 
   end
 end

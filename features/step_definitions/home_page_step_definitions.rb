@@ -46,13 +46,9 @@ Then /^the page should contain "([^"]*)"$/ do |name|
 #     pending # express the regexp above with the code you wish you had
 # end
 
-# When(/^he clicks on the 'Patrocínio' link$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
-
-# Then(/^all logos of the sponsors must be displayed$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+When(/^he clicks on the 'Patrocínio' link$/) do
+     @site.home_page.patrocinio_link.click
+ end
 
 # Then(/^contact information is displayed on the footer \(Blog, Facebook, YouTube, e\-Mail, Phone\)$/) do
 #     pending # express the regexp above with the code you wish you had
