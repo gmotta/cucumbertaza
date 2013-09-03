@@ -5,7 +5,7 @@ Before do
 end
 
 After do
-  @site.close
+  @site.browser.close
 end
 
 
