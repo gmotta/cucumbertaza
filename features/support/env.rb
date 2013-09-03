@@ -5,12 +5,9 @@ require 'taza'
 require 'espaco'
 require 'watir-webdriver'
 
-
 ENV["TAZA_ENV"] ||= 'isolation'
 
 (ENV['BROWSER'] ||= 'firefox').downcase
-
-
 
 module Taza
   class Browser
