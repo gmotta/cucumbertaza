@@ -38,14 +38,6 @@ Then /^the page should contain "([^"]*)"$/ do |name|
 #     pending # express the regexp above with the code you wish you had
 # end
 
-# When(/^he click on facebook "(.*?)" link$/) do |arg1|
-#     pending # express the regexp above with the code you wish you had
-# end
-
-# Then(/^facebook page is liked$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
-
 # When(/^he clicks on the 'Patrocínio' link$/) do
 #     pending # express the regexp above with the code you wish you had
 # end

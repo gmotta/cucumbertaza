@@ -19,11 +19,6 @@ Given the visitor is on the home page
 #When he click on facebook link
 #Then the facebook page is displayed
 
-#Scenario: Test if Facebook "like" button 
-Given the visitor is on the home page 
-#When he click on facebook "like" link
-#Then facebook page is liked
-
 #Scenario: Test if sponsors logos are being displayed
 Given the visitor is on the home page
 #When he clicks on the 'Patrocínio' link
