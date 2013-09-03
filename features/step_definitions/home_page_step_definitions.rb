@@ -26,9 +26,9 @@ end
 #     pending # express the regexp above with the code you wish you had
 # end
 
-#Then(/^the page should contain "Conheça nossas atividades"$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+Then /^the page should contain "([^"]*)"$/ do |name|
+     @site.home_page.sub_heading_exists?(name).should be_true
+ end
 
 # When(/^he click on facebook link$/) do
 #     pending # express the regexp above with the code you wish you had

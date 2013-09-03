@@ -11,6 +11,10 @@ module Espaco
     element(:sub_heading) { |name| browser.h1(:text => name) }
     element(:activities_link) { browser.link(:text => 'Atividades') }
 
+    def sub_heading_exists?(name)
+      sub_heading(name).text.include? name
+    end
+
 
 
   end
