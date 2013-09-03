@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Before do
-  @site = EspacoDaCrianca.new
+  @site = Espaco.new
 end
 
 After do

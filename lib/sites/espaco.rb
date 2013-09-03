@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'taza'
 
-module EspacoDaCrianca
+module Espaco
   include ForwardInitialization
 
-  class EspacoDaCrianca < ::Taza::Site
+  class Espaco < ::Taza::Site
   	def close
   		browser.close
   	end

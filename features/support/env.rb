@@ -1,7 +1,15 @@
-$LOAD_PATH << File.expand_path('../../lib/sites', __FILE__)
+$LOAD_PATH << File.expand_path('../../../lib/sites', __FILE__)
+require 'rubygems'
+require 'cucumber'
 require 'taza'
-require 'espacoDaCrianca'
+require 'espaco'
 require 'watir-webdriver'
+
+
+ENV["TAZA_ENV"] ||= 'isolation'
+
+(ENV['BROWSER'] ||= 'firefox').downcase
+
 
 
 module Taza

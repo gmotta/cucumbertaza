@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'taza/page'
 
-module EspacoDaCrianca
+module Espaco
   class HomePage < ::Taza::Page
 
   	def initialize()
