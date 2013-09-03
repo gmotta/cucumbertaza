@@ -25,7 +25,7 @@ end
 #     pending # express the regexp above with the code you wish you had
 # end
 
-# Then(/^the page should contain "Conheça nossas atividades"$/) do
+#Then(/^the page should contain "Conheça nossas atividades"$/) do
 #     pending # express the regexp above with the code you wish you had
 # end
 
