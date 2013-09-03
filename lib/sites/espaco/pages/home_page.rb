@@ -9,6 +9,7 @@ module Espaco
   	#end
 
     element(:sub_heading) { |name| browser.h1(:text => name) }
+    element(:activities_link) { browser.link(:text => 'Atividades') }
 
 
 

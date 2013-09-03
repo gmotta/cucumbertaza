@@ -14,7 +14,8 @@ Given(/^the visitor is on the home page$/) do
 end                                                                                                                                                     
                                                                                                                                                           
 When(/^he clicks on Activities$/) do                                                                                                                      
-  @site.browser.goto "http://espaco-da-crianca.herokuapp.com/#activities"                                                                                      
+  @site.home_page.activities_link.click
+  #@site.browser.goto "http://espaco-da-crianca.herokuapp.com/#activities"                                                                                      
 end                                                                                                                                                       
                                                                                                                                                           
 Then(/^the page url should contain 'activities'$/) do                                                                                                     
