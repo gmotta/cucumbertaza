@@ -14,7 +14,8 @@ module Espaco
     element(:facebook)                { browser.link(:text => 'Facebook')}
     element(:youtube)                 { browser.link(:text => 'Youtube')}
     element(:email)                   { browser.link(:text => 'arhcrianca@gmail.com')}
-    element(:phone)                   { browser.img(:alt => 'Phone')}        
+    element(:phone)                   { browser.img(:alt => 'Phone')}
+    element(:facebook_link)           { browser.img(:src => "/assets/facebook-66627c1860af27dbc237f98fa9191582.png") }
 
     def sub_heading_exists?(name)
       sub_heading(name).text.include? name
@@ -23,8 +24,10 @@ module Espaco
     def footer_elements_shown?
       blog.exists? && facebook.exists? && youtube.exists? && email.exists? && phone.exists?
     end
-
-
+      
+    def facebook_page?(url)
+        !browser.windows.find{|w| w.url == url}.nil?
+    end
 
   end
 end

@@ -30,13 +30,13 @@ Then /^the page should contain "([^"]*)"$/ do |name|
      @site.home_page.sub_heading_exists?(name).should be_true
 end
 
-# When(/^he click on facebook link$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+When(/^he clicks on facebook link$/) do
+    @site.home_page.facebook_link.click
+end
 
-# Then(/^the facebook page is displayed$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+Then(/^the facebook page is displayed$/) do
+    @site.home_page.facebook_page?("https://www.facebook.com/espacodacrianca.arh")
+end
 
 # When(/^he clicks on the 'Patrocínio' link$/) do
 #     pending # express the regexp above with the code you wish you had
