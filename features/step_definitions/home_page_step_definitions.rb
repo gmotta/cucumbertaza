@@ -15,11 +15,11 @@ end
                                                                                                                                                           
 When(/^he clicks on Activities$/) do                                                                                                                      
   @site.home_page.activities_link.click
-  #@site.browser.goto "http://espaco-da-crianca.herokuapp.com/#activities"                                                                                      
+
 end                                                                                                                                                       
                                                                                                                                                           
 Then(/^the page url should contain 'activities'$/) do                                                                                                     
-   (@site.browser.url.include? "#activities").should == true  
+   @site.browser.url.should == "http://espaco-da-crianca.herokuapp.com/#activities"  
 end
 
 Then(/^welcome banner is displayed$/) do
