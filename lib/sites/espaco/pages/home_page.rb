@@ -7,7 +7,6 @@ module Espaco
   class HomePage < ::Taza::Page
 
     element(:sub_heading)             { |name| browser.h1(:text => name) }
-    element(:link)                    { |name| browser.link(:text => name) }
     element(:blog)                    { browser.link(:text => 'Blog')}
     element(:facebook)                { browser.link(:text => 'Facebook') }
     element(:youtube)                 { browser.link(:text => 'Youtube') }
@@ -35,11 +34,6 @@ module Espaco
     def browser_url?(name)
       browser.url.include? name
     end
-    
-    def click_menu(name)      
-      link(name).when_present.click
-    end
-    
-    
+        
   end
 end

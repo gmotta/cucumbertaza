@@ -13,7 +13,8 @@ Given(/^the visitor is on the home page$/) do
 end                                                                                                                                                     
                                                                                                                                                           
 When(/^he clicks on "([^"]*)"$/) do |name|                                                                                                                      
-  @site.home_page.click_menu(name)
+  #@site.home_page.click_menu(name)
+  @site.menu.click_menu(name)
 
 end                                                                                                                                                       
                                                                                                                                                           
