@@ -20,7 +20,6 @@ Given the visitor is on the home page
 When he clicks on facebook link
 Then the facebook page is displayed
 
-@wip
 Scenario: Test if sponsors logos are being displayed
 Given the visitor is on the home page
 When he clicks on the 'Patrocínio' link
