@@ -1,9 +1,8 @@
 Feature: This feature contain scenarios that will test the home page of http://espaco-da-crianca.herokuapp.com/
 
-@wip
 Scenario: Test the welcome banner
 Given the visitor is on the home page
-Then a "Bem vindo" banner is displayed
+Then welcome banner is displayed
 
 Scenario: Test if Activities is being shown on the url
 Given the visitor is on the home page

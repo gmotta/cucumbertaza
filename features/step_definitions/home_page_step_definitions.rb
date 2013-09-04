@@ -22,9 +22,9 @@ Then(/^the page url should contain 'activities'$/) do
    (@site.browser.url.include? "#activities").should == true  
 end
 
-# Then(/^a "(.*?)" banner is displayed$/) do |arg1|
-#     pending # express the regexp above with the code you wish you had
-# end
+Then(/^welcome banner is displayed$/) do
+     @site.home_page.sub_heading_exists?('Bem vindo').should be_true
+ end
 
 Then /^the page should contain "([^"]*)"$/ do |name|
      @site.home_page.sub_heading_exists?(name).should be_true
