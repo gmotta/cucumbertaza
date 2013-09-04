@@ -1,3 +1,2 @@
-lib/sites/.DS_Store
 Gemfile.lock
-*/.DS_Store
+*.DS_Store
