@@ -27,6 +27,9 @@ module Espaco
     def facebook_page?(url)
         !browser.windows.find{|w| w.url == url}.nil?
     end
-
+    
+    def browser_url?(name)      
+      browser.url.include? name
+    end
   end
 end

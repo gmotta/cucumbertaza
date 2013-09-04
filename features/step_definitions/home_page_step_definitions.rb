@@ -18,8 +18,8 @@ When(/^he clicks on Activities$/) do
 
 end                                                                                                                                                       
                                                                                                                                                           
-Then(/^the page url should contain 'activities'$/) do                                                                                                     
-   @site.browser.url.should == "http://espaco-da-crianca.herokuapp.com/#activities"  
+Then(/^the page url should contain "([^"]*)"$/) do |name|                                                                                                     
+   @site.home_page.browser_url?(name).should be_true
 end
 
 Then(/^welcome banner is displayed$/) do
