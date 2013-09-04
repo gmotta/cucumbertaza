@@ -8,13 +8,12 @@ After do
   @site.browser.close
 end
 
-
 Given(/^the visitor is on the home page$/) do                                                                                                             
   @site.browser
 end                                                                                                                                                     
                                                                                                                                                           
-When(/^he clicks on Activities$/) do                                                                                                                      
-  @site.home_page.activities_link.click
+When(/^he clicks on "([^"]*)"$/) do |name|                                                                                                                      
+  @site.home_page.click_menu(name)
 
 end                                                                                                                                                       
                                                                                                                                                           
@@ -26,7 +25,7 @@ Then(/^welcome banner is displayed$/) do
      @site.home_page.sub_heading_exists?('Bem vindo').should be_true
  end
 
-Then /^the page should contain "([^\"]*)"$/ do |name|
+Then(/^the page should contain "([^"]*)"$/) do |name|
      @site.home_page.sub_heading_exists?(name).should be_true
 end
 

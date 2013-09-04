@@ -7,8 +7,7 @@ module Espaco
   class HomePage < ::Taza::Page
 
     element(:sub_heading)             { |name| browser.h1(:text => name) }
-    element(:activities_link)         { browser.link(:text => 'Atividades') }
-    element(:sponsors_link)           { browser.link(:text => 'Patrocínio') }
+    element(:link)                    { |name| browser.link(:text => name) }
     element(:blog)                    { browser.link(:text => 'Blog')}
     element(:facebook)                { browser.link(:text => 'Facebook') }
     element(:youtube)                 { browser.link(:text => 'Youtube') }
@@ -33,8 +32,14 @@ module Espaco
       sponsors.imgs.size == 11
     end
     
-    def browser_url?(name)      
+    def browser_url?(name)
       browser.url.include? name
     end
+    
+    def click_menu(name)      
+      link(name).when_present.click
+    end
+    
+    
   end
 end

@@ -9,13 +9,14 @@ ENV["TAZA_ENV"] ||= 'isolation'
 
 (ENV['BROWSER'] ||= 'firefox').downcase
 
+
 module Taza
   class Browser
     def self.create_watir_webdriver(params)
       driver = Selenium::WebDriver.for params[:browser].to_sym, :profile => params[:profile]
       Watir::Browser.new(driver)
-    end
+    end        
   end
-
-
 end
+
+
