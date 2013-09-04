@@ -1,1 +1,2 @@
-.DS_Store
+lib/sites/.DS_Store
+Gemfile.lock

@@ -28,28 +28,20 @@ end
 
 Then /^the page should contain "([^"]*)"$/ do |name|
      @site.home_page.sub_heading_exists?(name).should be_true
- end
+end
 
-# When(/^he click on facebook link$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+When(/^he clicks on facebook link$/) do
+    @site.home_page.facebook_link.click
+end
 
-# Then(/^the facebook page is displayed$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
-
-# When(/^he click on facebook "(.*?)" link$/) do |arg1|
-#     pending # express the regexp above with the code you wish you had
-# end
-
-# Then(/^facebook page is liked$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+Then(/^the facebook page is displayed$/) do
+    @site.home_page.facebook_page?("https://www.facebook.com/espacodacrianca.arh")
+end
 
 When(/^he clicks on the 'Patrocínio' link$/) do
      @site.home_page.patrocinio_link.click
  end
 
-# Then(/^contact information is displayed on the footer \(Blog, Facebook, YouTube, e\-Mail, Phone\)$/) do
-#     pending # express the regexp above with the code you wish you had
-# end
+Then(/^contact information is displayed on the footer \(Blog, Facebook, YouTube, e\-Mail, Phone\)$/) do
+     @site.home_page.footer_elements_shown?.should be_true
+end
