@@ -37,10 +37,6 @@ Then(/^the facebook page is displayed$/) do
     @site.home_page.facebook_page?("https://www.facebook.com/espacodacrianca.arh")
 end
 
-When(/^he clicks on the 'Patrocínio' link$/) do
-	@site.home_page.sponsors_link.click
-end
-
 Then(/^all logos of the sponsors must be displayed$/) do
 	@site.home_page.home_page_contains_eleven_sponsors_images?.should be_true
 end
