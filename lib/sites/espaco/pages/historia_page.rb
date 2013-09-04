@@ -5,7 +5,11 @@ require 'taza/page'
 
 module Espaco
   class HistoriaPage < ::Taza::Page
-    element(:historia_link)         { browser.link(:text => 'História') }
+    element(:sub_heading)            { |name| browser.h1(:text => name) }
+
+    def sub_heading_exists?(name)
+      sub_heading(name).text.include? name
+    end
 
 
   end

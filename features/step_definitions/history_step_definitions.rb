@@ -6,5 +6,5 @@ When(/^the visitor click on history$/) do
 end
 
 Then(/^the history page is displayed$/) do
-  @site.historia_page.sub_heading_exists?(name).should be_true
+  @site.historia_page.sub_heading_exists?('Nossa história').should be_true
 end
