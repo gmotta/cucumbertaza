@@ -8,12 +8,11 @@ After do
   @site.browser.close
 end
 
-Given(/^the visitor is on the home page$/) do                                                                                                             
-  @site.browser
+Given(/^the visitor is on the home page$/) do
+  @site.home_page                                                                                                          
 end                                                                                                                                                     
                                                                                                                                                           
 When(/^he clicks on "([^"]*)"$/) do |name|                                                                                                                      
-  #@site.home_page.click_menu(name)
   @site.menu.click_menu(name)
 
 end                                                                                                                                                       

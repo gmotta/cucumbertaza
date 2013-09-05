@@ -34,7 +34,6 @@ module Espaco
     
     def browser_url?(name)
       browser.url.include? name
-    end
-        
+    end 
   end
 end
