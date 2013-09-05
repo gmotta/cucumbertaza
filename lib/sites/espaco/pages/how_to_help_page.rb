@@ -2,7 +2,7 @@ require 'rubygems'
 require 'taza/page'
 
 module Espaco
-  class ComunidadePage < ::Taza::Page
+  class HowToHelpPage < ::Taza::Page
 
   end
 end
