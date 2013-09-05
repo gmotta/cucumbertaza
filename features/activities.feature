@@ -24,11 +24,19 @@ Scenario: Test if the user can click on Famílias
   Then the page should contain "Atividades com as Famílias"
   Then the page url should contain "familias"
 
-
 Scenario: Test if the user can click on Crianças
   Given the visitor is on the home page
   When he clicks on "Atividades"
   And he clicks on "Crianças"
   Then the page should contain "Crianças"
   Then the page url should contain "criancas"
+
+Scenario: Test if the user is redirected to the blog when he clicks on Educação por Princípios.
+  Given the visitor is on the home page
+  When he clicks on "Atividades"
+  And he clicks on "Crianças"
+  And he clicks on "Educação por Princípios"
+  Then the page url should contain "espacocrianca-arh.blogspot.com.br"
+  And the page url should contain "/2013/06/espaco-da-crianca-arh-implementa.html"
+  And the page title should contain "Espaço da Criança-ARH implementa Educação por Princípios"
   
