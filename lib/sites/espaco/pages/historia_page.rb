@@ -10,7 +10,5 @@ module Espaco
     def sub_heading_exists?(name)
       sub_heading(name).text.include? name
     end
-
-
   end
 end
