@@ -39,4 +39,11 @@ Scenario: Test if the user is redirected to the blog when he clicks on Educaçã
   Then the page url should contain "espacocrianca-arh.blogspot.com.br"
   And the page url should contain "/2013/06/espaco-da-crianca-arh-implementa.html"
   And the page title should contain "Espaço da Criança-ARH implementa Educação por Princípios"
+
+  Scenario: Test if the user can click on the comunidades image
+  Given the visitor is on the home page
+  When he clicks on "Atividades"
+  And he clicks on the comunidades image
+  Then the page should contain "Comunidade"
+  Then the page url should contain "comunidade"
   
