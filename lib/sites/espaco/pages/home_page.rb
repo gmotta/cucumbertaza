@@ -14,6 +14,7 @@ module Espaco
     element(:phone)                   { browser.img(:alt => 'Phone') }
     element(:facebook_link)           { browser.img(:src => "/assets/facebook-66627c1860af27dbc237f98fa9191582.png") }
     element(:sponsors)                { browser.div(:id => 'index').section(:id => 'sponsors').div(:class => 'container') }
+    element(:comunities_image)        { browser.img(:src => "/assets/activities/comunidade_index-38255d738b2b889d41800eeb6bf13431.jpg") }
 
     def sub_heading_exists?(name)
       sub_heading(name).text.include? name

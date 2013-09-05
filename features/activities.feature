@@ -43,7 +43,7 @@ Scenario: Test if the user is redirected to the blog when he clicks on Educaçã
   Scenario: Test if the user can click on the comunidades image
   Given the visitor is on the home page
   When he clicks on "Atividades"
-  And he clicks on the comunidades image
+  And he clicks on the "Comunidades" image
   Then the page should contain "Comunidade"
   Then the page url should contain "comunidade"
   
