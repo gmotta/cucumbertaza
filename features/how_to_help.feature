@@ -9,4 +9,4 @@ Scenario: Test the donation link
 Scenario: Check if the how to help links works
   Given the visitor is on the home page
   When he clicks on "Como ajudar?"
-  Then 
+  Then the how to help page is displayed 

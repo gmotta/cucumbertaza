@@ -3,4 +3,5 @@ Feature: This feature contain scenarios that will test the home page of http://e
   Scenario: Test our history message
     Given the visitor is on the home page
     When the visitor click on history
-    Then the history page is displayed
+    Then the page url should contain "historia"
+    #Then the history page is displayed

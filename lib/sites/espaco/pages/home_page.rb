@@ -15,6 +15,9 @@ module Espaco
     element(:facebook_link)           { browser.img(:src => "/assets/facebook-66627c1860af27dbc237f98fa9191582.png") }
     element(:sponsors)                { browser.div(:id => 'index').section(:id => 'sponsors').div(:class => 'container') }
     element(:comunities_image)        { browser.img(:src => "/assets/activities/comunidade_index-38255d738b2b889d41800eeb6bf13431.jpg") }
+    element(:comunidades)             { browser.link(:text => "Comunidades")}
+    element(:familias)                 { browser.link(:text => 'Famílias')}
+    element(:criancas)                { browser.link(:text => 'Crianças')}
 
     def sub_heading_exists?(name)
       sub_heading(name).text.include? name
@@ -35,5 +38,14 @@ module Espaco
     def browser_url?(name)
       browser.url.include? name
     end 
+    
+    def click_activity(activity)
+      case activity
+        when "Comunidades" then comunidades.when_present.click
+        when "Famílias" then familias.when_present.click
+        when "Crianças" then criancas.when_present.click
+      end
+    end
+    
   end
 end

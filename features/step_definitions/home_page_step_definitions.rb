@@ -15,7 +15,12 @@ end
 When(/^he clicks on "([^"]*)"$/) do |name|                                                                                                                      
   @site.menu.click_menu(name)
 
-end                                                                                                                                                       
+end      
+
+And(/^he clicks on activity "([^"]*)"$/) do |activity|                                                                                                                      
+  @site.home_page.click_activity(activity)
+
+end                                                                                                                                                    
                                                                                                                                                           
 Then(/^the page url should contain "([^"]*)"$/) do |name|                                                                                                     
    @site.home_page.browser_url?(name).should be_true

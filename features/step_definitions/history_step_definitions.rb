@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 When(/^the visitor click on history$/) do
-  @site.navigate_to_history_flow
+  @site.navigate_to_history
 end
 
 Then(/^the history page is displayed$/) do
